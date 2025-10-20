@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 5 NBA-Form</title>
+    <style>
+      /* 
+        Display controls how an image is shown on an webpage.
+      */
+      .hide-radio {
+        display: none;
+      }
+
+      /*
+        padding is the space inside an element. Margin i sthe space outside an element.
+        color is the color of the font. Background is the color of the background.
+        cursor is basically defines what type of cursor it will be when your pointing over
+        an element.
+      */
+      .btn {
+        display: inline-block;
+        padding: 6px 10px;
+        margin: 6px 6px 12px 0;
+        background: #007185;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .hide-radio:checked label {
+        background: #00494f;
+      }
+      .panel {
+        display: none;
+        margin-top: 8px;
+      }
+
+      /* 
+        This line says: if the radio button with the ID "mode-signup" 
+        is checked, then the element with the ID "signup" 
+        that comes after it will be shown.
+      */
+      #mode-signup:checked ~ #signup {
+        display: block;
+      }
+
+      /* 
+        This one does the same thing but for the login panel.
+        If the "mode-login" radio button is checked,
+        the element with the ID "login" after it becomes visible.
+      */
+      #mode-login:checked ~ #login {
+        display: block;
+      }
+
+      /*
+      border color is the color of the border
+      border width is how thich a border it is defined by pixels
+      */
+      .hr {
+        border-color: rgb(49, 144, 144);
+        border-width: 2px;
+      }
+
+      .resetsubmitbutton {
+        border-radius: 15px;
+        color: white;
+        background-color: black;
+        width: 200px;
+        height: 30px;
+        border: none;
+      }
+
+      .body {
+        font-family: "Amazon Ember", Arial, sans-serif;
+      }
+
+      .button {
+        border-radius: 20px;
+        border: none;
+        background-color: rgb(0, 113, 113);
+        color: white;
+        width: 125px;
+        height: 27px;
+      }
+
+      .signandlog {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <header>
+      <h1>Top 5 NBA all time players Form</h1>
+      <h2>Note this is a school project</h2>
+      <p>Note go back if you havent read the entire page</p>
+      <!--
+      Target is basically where you want your link to open if it is in a new tab or in the smae one
+    F-->
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" target="_blank">Home Page</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <hr />
+      <!--
+      The form tag creates an area for user input.
+
+      Necessary attributes include:
+      method, which defines how data that is put into the form
+      is handled.
+      There are two possible values:
+      get, which displays all input at the end of the web address.
+      (NOTE: NOT GOOD FOR PRIVATE INFORMATION!!!)
+      post, which handles all input by sending it to a back-end
+      program.
+      id, which gives the form an identifying name different from
+      other forms.
+    -->
+      <form id="Rate-my-website" method="get">
+        <!-- 
+          The fieldset tag groups related elements in a form.
+          Necessary attributes include:
+          form, which links the fieldset to the ID of the form it
+          belongs to.
+        -->
+        <fieldset form="Rate-my-website">
+          <!-- 
+            The legend tag gives a title to the group of related inputs. 
+          -->
+          <legend>Contact Information</legend>
+          <!-- 
+            The label tag is used to explain what input is expected
+            from the input that immediately follows or is right before
+            the label.
+            Important attributes include:
+            for, which links to the ID of the input the label is for.
+          -->
+          <label for="first-name"> First Name: </label>
+          <!--
+            The input tag creates the actual element that users will
+            type their information into.
+            Necessary attributes include:
+            type, which states what type of input it is
+            Examples: text, tel, password, email, button, checkbox, etc.
+            id, which gives the input an identifying name different from
+            other inputs.
+            name, which gives a variable for how to store this information
+            in the search bar or on the back-end.
+            Important attributes include:
+            required, which forces a user to have to enter input in the
+            input.
+          -->
+          <input type="text" id="first-name" name="fname" required />
+          <br />
+          <br />
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="lname" required />
+          <br />
+          <br />
+          <label for email>Email:</label>
+          <input type="email" id="email" name="email" />
+        </fieldset>
+        <br />
+        <hr class="hr" />
+        <br />
+        <p>Trust me click sign up/log in</p>
+        <fieldset form="Rate-my-website">
+          <legend>Create An Account</legend>
+
+          <input
+            type="radio"
+            id="mode-signup"
+            name="mode"
+            class="hide-radio"
+            checked
+          />
+          <label for="mode-signup" class="btn">Sign up</label>
+
+          <input type="radio" id="mode-login" name="mode" class="hide-radio" />
+          <label for="mode-login" class="btn">Log in</label>
+
+          <section id="signup" class="panel">
+            <label for="signupemai">Signup Email<br /></label>
+            <input type="email" name="signup-email" required />
+            <br />
+            <label for="password">Password<br /></label>
+            <input type="password" name="signup-pass" required />
+            <br />
+            <label for="">Date of Birthday(Must Be 13 Or Older)</label>
+            <br />
+            <input type="date" id="Birthday" name="Birthday" min="2011-1-1" />
+            <br />
+            <br />
+            <input type="checkbox" id="yes-i-agree" name="yes" required />
+            <label for="termsandconditions"
+              >Yes I agree to the
+              <a href="termsandconditions.html">terms and conditons</a></label
+            >
+            <br />
+            <input type="checkbox" id="news" name="news" />
+            <label for="news-and-info"
+              >Yes I agree to recive news and promotions.</label
+            >
+            <br />
+            <br />
+
+            <button type="submit" class="button">
+              <a class="signandlog" href="signup.html" target="_blank"
+                >Create account</a
+              >
+            </button>
+          </section>
+
+          <section id="login" class="panel">
+            <label for="login-email"
+              >Login Email<br /><input type="email" name="login-email" required
+            /></label>
+            <br />
+            <label for="password"
+              >Password<br /><input type="password" name="login-pass" required
+            /></label>
+            <br />
+            <br />
+            <!--
+              The button makes a clickable button
+            -->
+            <button type="submit" class="button">
+              <a class="signandlog" href="login.html" target="_blank">Log in</a>
+            </button>
+          </section>
+        </fieldset>
+        <br />
+        <hr class="hr" />
+        <br />
+        <fieldset for="rating">
+          <legend>Rating of the lists</legend>
+          <label>Rate The list From 1-5</label>
+          <br />
+          <!--
+            For radio buttons, the name attribute must be the same
+            for all options in the same group. Otherwise, they will
+            not work properly.
+
+            The values must be different for each option so that
+            the data from the user can be properly taken in.
+          -->
+          <input
+            type="radio"
+            id="zero-to-one"
+            name="prog-exp"
+            value="0-1"
+            required
+          />
+          <label for="zero-to-one">0-1</label>
+
+          <br />
+
+          <input
+            type="radio"
+            id="two-to-four"
+            name="prog-exp"
+            value="2-4"
+            required
+          />
+          <label for="one">2-4</label>
+
+          <br />
+
+          <input
+            type="radio"
+            id="five-plus"
+            name="prog-exp"
+            value="5"
+            required
+          />
+          <label for="over">5</label>
+
+          <br />
+
+          <label for="fav-palyer"
+            >Choose Your Favourite Player From the Dropdown:</label
+          >
+
+          <br />
+
+          <!--
+              The select tag creates a dropdown menu input.
+              Necessary attributes include:
+              id, which gives the input an unique identifier inside the form.
+              name, which gives a variable for how to store this information.
+            -->
+          <select id="fav-palyer" name="player">
+            <!--
+              The option tag creates one of the options inside the
+              dropdown menu.
+              Necessary attributes include:
+              value, which gives an internal value that will be
+              sent to the back-end or displayed in the search
+              bar when this option is selected.
+            -->
+            <option value="Lebron James">Lebron James</option>
+            <option value="Michael Jordon">Michael Jordon</option>
+            <option value="Shaquille O'Neal">Shaquille O'Neal</option>
+            <option value="Kobe Bryant">Kobe Bryant</option>
+            <option value="Steph Curry">Steph Curry</option>
+          </select>
+        </fieldset>
+
+        <br />
+        <hr class="hr" />
+        <br />
+
+        <!--
+          The submit input creates a button that allows the user
+          to enter the form.
+
+          Necessary attributes include:
+            type, which defines what kind of input it is.
+              For a submit button, the value must be "submit".
+            id, which gives the input an unique identifier inside the form.
+            name, which gives a variable for how to store this information.
+            value, which defines what text is displayed on the button.
+        -->
+        <input
+          type="submit"
+          id="submit-button"
+          name="submit"
+          value="Submit Form"
+          class="resetsubmitbutton"
+        />
+
+        <br />
+        <br />
+
+        <!--
+          The reset input creates a button that allows the user
+          to clear everything in the form.
+
+          Necessary attributes include:
+            type, which defines what kind of input it is.
+              For a reset button, the value must be "reset".
+            id, which gives the input an unique identifier inside the form.
+            name, which gives a variable for how to store this information.
+            value, which defines what text is displayed on the button.
+        -->
+        <input
+          type="reset"
+          id="reset-button"
+          name="reset"
+          value="Reset Form"
+          class="resetsubmitbutton"
+        />
+        <br />
+        <br />
+      </form>
+      <hr class="hr" />
+      <br />
+    </main>
+    <footer>&#169; This is made by me AND IS SUBJECTED COPYRIGHT</footer>
+  </body>
+</html>

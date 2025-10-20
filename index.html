@@ -3,31 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NBA</title>
+    <title>NBA Top 5</title>
+
+    <style>
+      .table {
+        width: 60%;
+        border-collapse: collapse;
+        margin: 20px auto;
+      }
+      /*
+      The Border Collapse tag is basically sets wheather table borders 
+      should collapse into a single border pr be seperated.
+    */
+      .th,
+      td {
+        border: 1px solid #333;
+        padding: 10px;
+        text-align: center;
+      }
+      /*
+      Text align tag is basically how the text should be aligned.
+    */
+      .th {
+        background-color: #f2f2f2;
+      }
+      .all_stockimg {
+        float: right;
+        width: 280px;
+        max-width: 40%;
+        height: auto;
+        margin: 15px 15px 15px 15px;
+        border-radius: 6px;
+        object-fit: cover;
+        display: block;
+      }
+      /*
+      The float css tag is a positioning tool used to shift something
+      like an image to the left or right side.
+      The border radius tag is how rounded the corneres of something are,
+      the higher the px count the rounder the corners.
+      Object fit is used to tell the computer how a image or video should
+      be resized to fit.
+      Display tag controls how an image is shown on a web page.
+    */
+      .all_info {
+        text-align: left;
+        overflow-wrap: break-word;
+        display: block;
+        margin: 0;
+        max-width: 700px;
+        font-size: 20px;
+      }
+      /*
+      The overflow wrap tag tells the browser if it should break long words 
+      onto the next line.
+    */
+      .player {
+        overflow: auto;
+      }
+
+      .questions {
+        font-size: 25px;
+      }
+
+      .list {
+        font-size: 20px;
+      }
+
+      .top5 {
+        font-size: 30px;
+      }
+
+      .body {
+        font-family: "Amazon Ember", Arial, sans-serif;
+      }
+
+      .lebronthegoat {
+        max-width: 800px;
+        overflow-wrap: break-word;
+        text-align: left;
+        margin: 0px;
+      }
+
+      .vid {
+        float: right;
+        width: 360px;
+        max-width: 40%;
+        height: auto;
+        margin: 0 0 12px 16px;
+        display: block;
+      }
+    </style>
   </head>
-  <body>
+  <body class="body">
     <header>
       <h1>
         This is a list of the GREATEST nba players of all time (This list is in
         order)
       </h1>
+      <h2>
+        This website contains the top 5 players of all time. They will be in
+        Order so not in a random way. Please leave your thoughts so I can expand
+        my list and make it better than before
+      </h2>
+      <p>
+        Please come back here after you read through everything on this web page
+        so that you can rate it on this one.
+      </p>
+      <nav>
+        <ul>
+          <li>
+            <a target="_blank" href="Forms.html">NBA-Top5-Form</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-
+    <hr />
     <main>
-      <section>
-        <p>
-          This website contains the top 5 players of all time. They will be in
-          Order so not in a random way. Please leave your thoughts so I can
-          expand my list and make it better than before
-        </p>
-
-        <p>
-          If you want me to explain why I chose these players please scroll down
-        </p>
-      </section>
+      <p class="top5">
+        This is my list of the top 5 best NBA players of all time
+      </p>
 
       <section>
-        <ol>
+        <ol class="list">
           <li>Lebron Raymone James</li>
           <li>Michael Jeffery Jordan</li>
           <li>Thanasis Antetokounmpo</li>
@@ -35,124 +133,193 @@
           <li>Wardell Stephen Curry II</li>
         </ol>
       </section>
-      <p>
-        You guys will probably think why do I have Lebron better than Michael
-        Jordan, I could go very in detail for that but I wont cause it will take
-        to Instead I will have a link to a youtube video which explains that
-        doen below.
-      </p>
-      <br />
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/3yZvwSL3Dig?si=NzyiMzMAT43_lNec"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+      <hr />
       <section>
         <p>
-          <i> Now I will explain why I have these NBA players in my top 5 </i>
-        </p>
-        <br />
-        <br />
-        <br />
-        <p>
-          <b> Why do I have lebron as the goat? </b>
-        </p>
-        <br />
-        <p>
-          <u>
-            Lebron is the goat because of how he plays the game and how well he
-            can make whatever team he is on play better. He can take a bucnh of
-            randoms to the fianl which no other NBA can do. And his longevity
-            which when compared to any other athalete he is the best. he is also
-            almost top 10 in every stat an No 1. in all time points there is
-          </u>
-        </p>
-        <img
-          src="https://media.gettyimages.com/id/2200756722/photo/charlotte-hornets-v-los-angeles-lakers.jpg?s=2048x2048&w=gi&k=20&c=vFn-ATjRG2ACU_F6evDsaWYrvppxvxxJYhMq9V325Js="
-          width="500px"
-          />
-        <br />
-        <br />
-        <p>
-          <b>
-            Why do I have Michael Jordon as the second best player of all time?
+          <b class="questions">
+            This is a list of their PPG(Points Per Game), APG(Assists Per Game),
+            RPG(Rebounds Per Game)
           </b>
         </p>
-        <br />
-        <p>
-          <u>
-            Michael Jordon made the game of basketball more popular. Many good
-            players of this era grew up watching players like MJ, including
-            Lebron James. The reason I don't have MJ as the goat is beacuse he
-            could not make it past the first round without another HOF player
-            unlike Lebron.
-          </u>
-        </p>
-        <img
-          src="https://media.gettyimages.com/id/329764/photo/michael-jordan.jpg?s=1024x1024&w=gi&k=20&c=SSieJq2lUCz_W34353wUm7MDpDd73_IjgdjO1hnLDGo="
-        />
-        <br />
-        <br />
-        <p>
-          <b>
-            Why do I have Thanasis Antetokounmpo as the third best player of all
-            time?
-          </b>
-        </p>
-        <br />
-        <br />
-        <p>
-          <u>
-            The reason I have Thanasis Antetokounmpo as the third best player of
-            all time is beacuse he is the brother of Giannis who is a MVP, and a
-            NBA finals champion and a has a finals MVP. He also has about 500
-            points which is really good for playing only for 6 seasons.
-          </u>
-        </p>
-        <img src="" <br />
-        <br />
-        <p>
-          <b>
-            Why do I have Bronny James Jr as the forth best player of all time?
-          </b>
-        </p>
-        <br />
-        <br />
-        <p>
-          <u>
-            The reason I have Bronny James Jr as the forth best player of all
-            time is becasue he is the son of Lebron James and he also dropped 17
-            points on Giannis Antetokounmpo and crossed him up. I will have a
-            link to that so you can see for urself he also plays for the Los
-            Angeles Lakers which is argubaly the best team in the league. So
-            playing for them is difficut.
-          </u>
-        </p>
-        <br />
-        <br />
-        <p>
-          <b>
-            Why do I have Steph Curry as the Fifth best player of all time?
-          </b>
-        </p>
-        <br />
-        <br />
-        <p>
-          <u>
-            The reason I have Steph Curry as the Fifth best player of all time
-            is becasue how good he can shoot the three ball he is the all time
-            leading 3pts leader of all time which a record I think is impossible
-            to break while doing on a really good Field Goal percentage. Steph
-            Curry also has 4 rings a final MVP and is the first NBA player of
-            all time to get a unanimous Mvp.
-          </u>
+        <table>
+          <tr>
+            <th>Player</th>
+            <th>PPG (Career)</th>
+            <th>APG (Career)</th>
+            <th>RPG (Career)</th>
+          </tr>
+          <tr>
+            <td>Lebron James</td>
+            <td>27.1</td>
+            <td>7.4</td>
+            <td>7.5</td>
+          </tr>
+          <tr>
+            <td>Michael Jordon</td>
+            <td>30.1</td>
+            <td>5.3</td>
+            <td>6.2</td>
+          </tr>
+          <tr>
+            <td>Thanasis Antetokounmpo</td>
+            <td>2.4</td>
+            <td>0.6</td>
+            <td>1.6</td>
+          </tr>
+          <tr>
+            <td>Bronny James Jr</td>
+            <td>2.3</td>
+            <td>0.8</td>
+            <td>0.7</td>
+          </tr>
+          <tr>
+            <td>Stephen Curry</td>
+            <td>24.7</td>
+            <td>6.4</td>
+            <td>4.7</td>
+          </tr>
+        </table>
+      </section>
+      <hr />
+      <section class="player">
+        <iframe
+          class="vid"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/COZ_lSOcOKc?si=SRW0Kcqf2-p024Tx"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <h3 class="lebronthegoat">
+          <i class="questions">
+            Now I will explain why I have these NBA players in my top 5, but
+            before that I will explain why lebron is better than Michael Jordon.
+          </i>
+          <br />
+          <br />
+        </h3>
+        <p class="lebronthegoat">
+          You might me wondering why I have <s>Michael Jordon</s> no lebron as
+          the goat. There are many reasons I were to go through them in this web
+          page it would take forever so instead I will link a video down below
+          which covers some if not most of the facts.
         </p>
       </section>
+      <hr />
+      <section>
+        <section class="player">
+          <img
+            class="all_stockimg"
+            src="https://media.gettyimages.com/id/2212828294/photo/minnesota-timberwolves-v-los-angeles-lakers-game-five.jpg?s=2048x2048&w=gi&k=20&c=Y1Z4XiStDqVvxGS2bvtkWQm1_AR6NcjFLsM7pFzSta4="
+          />
+          <p>
+            <b class="questions"> Why do I have lebron as the goat? </b>
+          </p>
+          <p class="all_info">
+            <u class="all_info">
+              LeBron James is the goat because he is very versitile won a 3-1
+              comeback and is top 10 in almost every catogery and 1st in points
+              he is also the oldest player in the NBA which proves his longevity
+              is good he also took a team of with no good player to the finals
+              he also beat the 73-9 warriors a team with 4 hall of players in he
+              finals.
+            </u>
+          </p>
+        </section>
+        <hr />
+        <section class="player">
+          <img
+            class="all_stockimg"
+            src="https://media.gettyimages.com/id/2172934868/photo/nba-chicago-bulls-v-atlanta-hawks.jpg?s=612x612&w=gi&k=20&c=-tOsacR931JUdVvgW9fYT2cJTP9qDFI9y7a0l-tMtu4="
+          />
+          <p>
+            <b class="questions">
+              Why do I have Michael Jordon as the second best player of all
+              time?
+            </b>
+          </p>
+          <p>
+            <u class="all_info">
+              Michael Jordan is the second best player all time because he was
+              not a great passer and could never make it past the 1st round
+              without another Hall of Famers unlike lebron. Although he did
+              average 30.1 points throughout his carrer this is why he is the
+              second best player and not the first.
+            </u>
+          </p>
+        </section>
+        <hr />
+        <section class="player">
+          <img
+            class="all_stockimg"
+            src="https://media.gettyimages.com/id/1999174886/photo/charlotte-hornets-v-milwaukee-bucks.jpg?s=612x612&w=gi&k=20&c=gjcpMFXx5RNPNz6mqecf6aWzGXy-hJHAy7ZXeaUeeug="
+          />
+          <p>
+            <b class="questions">
+              Why do I have Thanasis Antetokounmpo as the third best player of
+              all time?
+            </b>
+          </p>
+
+          <p>
+            <u class="all_info">
+              The reason I have Thanasis Antetokounmpo as the third best player
+              of all time is beacuse he is the brother of Giannis who is a MVP,
+              and a NBA finals champion and a has a finals MVP. He also has
+              about 500 points which is really good for playing only for 6
+              seasons.
+            </u>
+          </p>
+        </section>
+        <hr />
+        <section class="player">
+          <img
+            class="all_stockimg"
+            src="https://media.gettyimages.com/id/2180392115/photo/minnesota-timberwolves-v-los-angeles-lakers.jpg?s=612x612&w=gi&k=20&c=dD-szKge35joxr1i30Y1GOfauIP_1kiZhnPB7xsXboQ="
+          />
+          <p>
+            <b class="questions">
+              Why do I have Bronny James Jr as the forth best player of all
+              time?
+            </b>
+          </p>
+          <p>
+            <u class="all_info">
+              The reason I have Bronny James Jr as the forth best player of all
+              time is becasue he is the son of Lebron James and he also dropped
+              17 points on Giannis Antetokounmpo and crossed him up. he also
+              plays for the Los Angeles Lakers which is argubaly the best team
+              in the league. So playing for is difficut.
+            </u>
+          </p>
+        </section>
+        <hr />
+        <section class="player">
+          <img
+            class="all_stockimg"
+            src="https://media.gettyimages.com/id/2203344424/photo/golden-state-warriors-v-new-york-knicks.jpg?s=2048x2048&w=gi&k=20&c=zVimwZjQkbjsZfCXvnWIuAhvw5_E-KMS0drHf-YdOlE="
+          />
+          <p>
+            <b class="questions">
+              Why do I have Steph Curry as the Fifth best player of all time?
+            </b>
+          </p>
+          <p>
+            <u class="all_info">
+              The reason I have Steph Curry as the Fifth best player of all time
+              is becasue how good he can shoot the three ball he is the all time
+              leading 3pts leader of all time which a record I think is
+              impossible to break while doing on a really good Field Goal
+              percentage. Steph Curry also has 4 rings a final MVP and is the
+              first NBA player of all time to get a unanimous Mvp.
+            </u>
+          </p>
+        </section>
+      </section>
     </main>
+    <hr />
+    <footer>&#169; This is made my me AND IT IS SUBJECTED TO COPYRIGHT</footer>
   </body>
 </html>
